@@ -17,7 +17,7 @@ class NetworkController1 {
 				completion(nil)
 				return
 			}
-			guard let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) else {
+            guard (try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)) != nil else {
 				completion(nil)
 				return
 			}
@@ -40,7 +40,7 @@ class NetworkController {
 				completion(nil)
 				return
 			}
-			guard let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) else {
+            guard (try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)) != nil else {
 				completion(nil)
 				return
 			}
